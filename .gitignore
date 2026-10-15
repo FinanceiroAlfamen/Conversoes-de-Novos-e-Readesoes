@@ -1,0 +1,7 @@
+/tmp/
+/preview/
+/Base de Dados/
+__pycache__/
+*.pyc
+.env
+.env.*
