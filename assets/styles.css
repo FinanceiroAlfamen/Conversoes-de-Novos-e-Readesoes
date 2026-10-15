@@ -827,3 +827,21 @@
  .management-feature{font-size:22px}.management-period-pair b{font-size:18px}
  .action-card{break-inside:auto}
 }
+
+/* Shared menu design across report selectors, calendar and data review. */
+.menu-native{display:none!important}
+.menu-select-shell{display:inline-block;position:relative;min-width:150px;max-width:100%;vertical-align:middle;text-align:left}
+.menu-select-shell .analysis-picker{width:100%}
+.menu-select-shell .analysis-options{min-width:220px;right:auto;width:max-content;max-width:min(330px,80vw)}
+.menu-select-shell .analysis-choice{min-height:40px}
+.menu-select-shell .analysis-choice:disabled{opacity:.45;cursor:default}
+.panel:has(.analysis-picker[open]),.clinic-card:has(.analysis-picker[open]){position:relative;z-index:35}
+.table-actions label:has(.menu-select-shell){overflow:visible}
+.calendar-head .menu-select-shell{min-width:0;flex:1}
+.calendar-head .analysis-options{min-width:100%;width:max-content;max-height:230px}
+.calendar-head .analysis-picker summary{font-size:10px;padding:6px 8px}
+.review-filters .menu-select-shell{display:block;width:100%;min-width:0}
+.period-menu,.print-menu{border-radius:14px;box-shadow:0 8px 28px #14385b24;animation:analysis-picker-in .18s ease-out both}
+.period-menu button,.print-menu button{border-radius:8px}
+@media(prefers-reduced-motion:reduce){.period-menu,.print-menu{animation:none}}
+@media print{.analysis-options,.menu-select-shell{display:none!important}}
